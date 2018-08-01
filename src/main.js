@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import vueResource from 'vue-resource'
 import Customers from './components/Customers'
 import About from './components/About'
+import AddCustomer from './components/AddCustomer'
 
 
 Vue.config.productionTip = false
@@ -19,6 +20,7 @@ const router = new VueRouter({
 	routes:[
 		{path:'/',component:Customers},
 		{path:'/about',component:About},
+		{path:'/add_customer',component:AddCustomer},
 	]
 });
 
@@ -46,6 +48,9 @@ const vm = new Vue({
 		            <li><router-link to='/'>Home</router-link></li>
 		            <li><router-link to="/about">About</router-link></li>
 		          </ul>
+		          <ul class="nav navbar-nav navbar-right">
+				    <li><router-link to="/add_customer">Add Customer<router-link></li>
+				  </ul>
 		        </div>
 		      </div>
 		    </nav>
