@@ -1,4 +1,4 @@
-# Vue js wil slim apis
+# Vue js with slim apis
 
 > A Vue.js project
 
