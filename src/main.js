@@ -6,6 +6,8 @@ import vueResource from 'vue-resource'
 import Customers from './components/Customers'
 import About from './components/About'
 import AddCustomer from './components/AddCustomer'
+import CustomerDetails from './components/CustomerDetails'
+import EditCustomer from './components/EditCustomer'
 
 
 Vue.config.productionTip = false
@@ -21,6 +23,8 @@ const router = new VueRouter({
 		{path:'/',component:Customers},
 		{path:'/about',component:About},
 		{path:'/add_customer',component:AddCustomer},
+		{path:'/customer/:id',component:CustomerDetails},
+		{path:'/customer/edit/:id',component:EditCustomer},
 	]
 });
 
@@ -32,7 +36,7 @@ const vm = new Vue({
 	router,
 	template:`
 		<div id='app'>
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-inverse">
 		      <div class="container">
 		        <div class="navbar-header">
 		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -49,7 +53,7 @@ const vm = new Vue({
 		            <li><router-link to="/about">About</router-link></li>
 		          </ul>
 		          <ul class="nav navbar-nav navbar-right">
-				    <li><router-link to="/add_customer">Add Customer<router-link></li>
+				    <li><router-link to="/add_customer">Add Customer</router-link></li>
 				  </ul>
 		        </div>
 		      </div>
